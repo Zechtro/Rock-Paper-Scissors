@@ -1,0 +1,86 @@
+<!-- STEVEN TJHIA -->
+<!-- Saya belajar dari sini https://www.youtube.com/watch?v=C6jSg4VPNZE&t=5344s -->
+<!-- Saya mengikuti video tersebut namun ada beberapa modifikasi -->
+<!-- png source : https://github.com/CleverProgrammers/challenge-rock-paper-scissors-game/tree/main/assets -->
+
+<!-- FITUR TAMBAHAN : Jika score computer telah mencapai 5 poin, maka game akan berakhir dan dilihat
+score user apakah mencapai highscore baru -->
+
+<!-- IDE1 : Sebenarnya kepikiran fitur tambahan ada tingkat kesulitannya
+Pada tiap masing-masing tingkat kesulitan, toleransi score maksimal computer akan berbeda-beda,
+tetapi sayangnya kurang waktu untuk itu -->
+
+<!-- IDE2 : Sebenarnya awalnya score computer maksimum ingin dibuat berupa health,
+namun kalau ada health tidak perlu ada score computer,
+sedangkan pada SOP project ini harus ditampilkan score -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="menu">
+                <div class="title">
+                    <img src="assets/title.png">
+                </div>
+                <!-- Fitur untuk menampilkan highscore -->
+                <div class="highscore">
+                    <p>HIGHSCORE</p>
+                    <h1 id="highScore">0</h1>
+                </div>
+                <div class="play" onclick="play()">
+                    <p>PLAY</p>
+                </div>
+            </div>
+            <div class="scoreboard">
+                <div class="score">
+                    <p>SCORE</p>
+                    <h1 id="userScore">0</h1>
+                    <p>USER</p>
+                </div>
+                <div class="title">
+                    <img src="assets/title.png">
+                </div>
+                <div class="score">
+                    <p>SCORE</p>
+                    <h1 id="computerScore">0</h1>
+                    <p>COMPUTER</p>
+                </div>
+            </div>
+            <div class="hands">
+                <div class="choice paper">
+                    <img src="assets/Paper.png" onClick="pickUserHand('paper')">
+                </div>
+                <div class="choice scissors">
+                    <img src="assets/Scissors.png" onClick="pickUserHand('scissors')">
+                </div>
+                <div class="choice rock">
+                    <img src="assets/Rock.png" onClick="pickUserHand('rock')">
+                </div>
+            </div>
+            <div class="contest">
+                <div class="userhand">
+                    <h1> YOU PICKED</h1>
+                    <div class="handImageContainer">
+                        <img id="userPickImage" src="assets/triangle.png">
+                    </div>
+                </div>
+                <div class="referee">
+                    <div class="result"><h1>WIN/LOSE</h1></div>
+                    <div class="continue" onclick="continueGame()">CONTINUE</div>
+                    <div class="playagain" onclick="playAgain()">MENU</div>
+                    <div class="ohno">OH, NO! The computer has reached 5 points!</div>
+                </div>
+                <div class="computerhand">
+                    <h1>COMPUTER PICK</h1>
+                    <div class ="handImageContainer">
+                        <img id="computerPickImage" src="assets/triangle.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

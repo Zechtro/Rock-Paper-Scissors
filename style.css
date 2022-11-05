@@ -1,0 +1,209 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper {
+    width: 100vw ; /* the whole view width */
+    height: 100vh;
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    width: 900px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .title img {
+    width: 300px;
+}
+
+.highscore {
+    color: white;
+    margin-top: 25px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.highscore p {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+
+.highscore h1 {
+    font-size: 40px;
+}
+
+.play {
+    width: 300px;
+    font-size: 50px;
+    margin-top: 25px;
+    background-color: white;
+    color: dodgerblue;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    justify-content: center;
+}
+
+.play:hover {
+    transform: translate3d(0px, 2px, 0px);
+}
+
+.scoreboard {
+    width: 700px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-top: 50px;
+    height: 150px;
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .scoreboard .title {
+    
+} */
+
+.score {
+    width: 150px;
+    height: 114px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score h1 {
+    color:midnightblue;
+    font-size: 56px;
+}
+
+.score p {
+    color: navy;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+}
+
+.hands {
+    background-image: url("assets/triangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 476px;
+    height: 430px;
+    /* Bikin jadi formasi segitiga gitu */
+    display: none;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.scissors {
+    margin-left: 20px;
+}
+
+.paper {
+    margin-right: 20px;
+}
+
+/* Ini buat bikin tombolnya bisa gerak 3d timbul ke atas gitu */
+.hands .choice {
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+/* Ini buat bikin tombolnya bisa gerak 3d timbul ke atas gitu */
+.hands .choice:hover {
+    transform: translate3d(0px, -8px, 0px);
+}
+
+.contest {
+    width: 900px;
+    display: none;
+    margin-top: 50px;
+}
+
+.contest img {
+    width: 275px;
+    height: 275px;
+    margin-top: 50px;
+}
+
+/* Target ke div terdekat dengan class contest
+untuk mentarget class userhand, referee, dan computerhand */
+.contest > div {
+    flex: 1;
+}
+
+.contest h1 {
+    color: white;
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contest .handImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.referee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.referee h1 {
+    font-size: 45px;
+}
+
+.continue, .playAgain {
+    background-color: white;
+    margin-top: 50px;
+    padding: 12px 24px; 
+    /* padding : top and bottom px*spasi* right and left px*/;
+    border-radius: 6px;
+    cursor: pointer;
+    color: dodgerblue;
+    transition: all 0.15s;
+}
+
+.ohno {
+    margin-top: 50px;
+    color: orangered;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.continue:hover {
+    background-color: gainsboro;
+    transform: translate3d(0px, -2px, 0px);
+    color: dimgray;
+    /* sumbu y minus, gerak ke atas */
+}
