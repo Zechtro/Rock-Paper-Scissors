@@ -27,7 +27,7 @@ const play = () => {
 
     document.querySelector(".ohno").style.display = "none"
     document.querySelector(".continue").style.display = "flex"
-    document.querySelector(".playagain").style.display = "none"
+    document.querySelector(".backtomenu").style.display = "none"
 }
 
 // Fungsi/Procedure setelah user memencet pilihannya
@@ -46,7 +46,7 @@ const pickUserHand = (hand) => {
     referee(hand, pickComputerHand());
     if (computerSCORE == 5) {
         document.querySelector(".continue").style.display = "none"
-        document.querySelector(".playagain").style.display = "flex"
+        document.querySelector(".backtomenu").style.display = "flex"
         // Menentukan apakah ada highscore baru
         if (userSCORE > highSCORE) {
             highSCORE = userSCORE

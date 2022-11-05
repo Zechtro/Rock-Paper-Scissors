@@ -183,7 +183,7 @@ untuk mentarget class userhand, referee, dan computerhand */
     font-size: 45px;
 }
 
-.continue, .playagain {
+.continue, .backtomenu {
     background-color: white;
     margin-top: 50px;
     padding: 12px 24px; 
